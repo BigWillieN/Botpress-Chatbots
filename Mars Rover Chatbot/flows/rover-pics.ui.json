@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "skill-9dadc0",
+      "position": {
+        "x": 100,
+        "y": 230
+      }
+    },
+    {
+      "id": "2427051aaa",
+      "position": {
+        "x": 711,
+        "y": 245
+      }
+    },
+    {
+      "id": "f0ba22547a",
+      "position": {
+        "x": 710,
+        "y": 435
+      }
+    },
+    {
+      "id": "c385f40b65",
+      "position": {
+        "x": 405,
+        "y": 265
+      }
+    },
+    {
+      "id": "4406968062",
+      "position": {
+        "x": 1049,
+        "y": 471
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "2427051aaa",
+      "sourcePort": "out0",
+      "target": "skill-9dadc0",
+      "points": [
+        {
+          "x": 912,
+          "y": 383
+        },
+        {
+          "x": 100,
+          "y": 260
+        }
+      ]
+    },
+    {
+      "source": "c385f40b65",
+      "sourcePort": "out0",
+      "target": "2427051aaa",
+      "points": [
+        {
+          "x": 606,
+          "y": 433
+        },
+        {
+          "x": 712,
+          "y": 262
+        }
+      ]
+    },
+    {
+      "source": "c385f40b65",
+      "sourcePort": "out1",
+      "target": "f0ba22547a",
+      "points": [
+        {
+          "x": 606,
+          "y": 462
+        },
+        {
+          "x": 710,
+          "y": 452
+        }
+      ]
+    },
+    {
+      "source": "f0ba22547a",
+      "sourcePort": "out0",
+      "target": "4406968062",
+      "points": [
+        {
+          "x": 911,
+          "y": 599
+        },
+        {
+          "x": 1049,
+          "y": 488
+        }
+      ]
+    },
+    {
+      "source": "skill-9dadc0",
+      "sourcePort": "out0",
+      "target": "c385f40b65",
+      "points": [
+        {
+          "x": 301,
+          "y": 332
+        },
+        {
+          "x": 405,
+          "y": 282
+        }
+      ]
+    },
+    {
+      "source": "skill-9dadc0",
+      "sourcePort": "out2",
+      "target": "c385f40b65",
+      "points": [
+        {
+          "x": 301,
+          "y": 390
+        },
+        {
+          "x": 405,
+          "y": 282
+        }
+      ]
+    }
+  ]
+}

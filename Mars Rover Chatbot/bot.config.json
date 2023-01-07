@@ -1,0 +1,46 @@
+{
+  "locked": false,
+  "details": {},
+  "skillChoice": {
+    "matchNLU": true,
+    "matchNumbers": true
+  },
+  "skillSendEmail": {
+    "transportConnectionString": "<<change me>>"
+  },
+  "$schema": "../../bot.config.schema.json",
+  "description": "",
+  "active": true,
+  "name": "Empty Bot",
+  "author": "Botpress, Inc.",
+  "license": "AGPL-3.0",
+  "imports": {
+    "modules": [],
+    "incomingMiddleware": [],
+    "outgoingMiddleware": []
+  },
+  "dialog": {
+    "timeoutInterval": "5m"
+  },
+  "logs": {
+    "expiration": "1 week"
+  },
+  "defaultLanguage": "en",
+  "languages": [
+    "en"
+  ],
+  "id": "empty-bot",
+  "messaging": {
+    "clientId": "d1547131-336f-40ca-8c0e-6d2dd3c84661",
+    "clientToken": "cd2b2a5a-1eb0-4bfd-b6fe-7137650d66ac.GH5+DnrXibTUGJsdF3g5452gdgeS+ILiaBl4dJXQKr5fy3rHlPcuaeUjPIN6QF0+hXPpL+Ulb8BLMJ0ib46whHHQ",
+    "channels": {},
+    "webhookToken": "ksTly88aQmLl1kpkc6qX4zVQZmdreA5FAFE3UWJWmB4RxPT+HWWVuOlIbvmU1VzPEQPfzGbNLyhhZmrAOXOVBgcU"
+  },
+  "cloud": {
+    "botId": "7b654b2f-75a6-4bd5-817f-4837d513f860",
+    "workspaceId": "ca2ea6d5-9d29-4059-933a-10e6e018af0f"
+  },
+  "nluModels": {
+    "en": "64b0881ef0826829.b2eeb23efb448373.8144.en"
+  }
+}

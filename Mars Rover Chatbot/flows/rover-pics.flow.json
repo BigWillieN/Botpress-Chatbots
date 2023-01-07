@@ -1,0 +1,103 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "grab-date",
+  "description": "",
+  "nodes": [
+    {
+      "id": "skill-9dadc0",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "grab-date",
+      "flow": "skills/Slot-9dadc0.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "check-day"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted  == \"true\"",
+          "conditionType": "props",
+          "node": "fallback-redirect.flow.json"
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": "check-day"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "2427051aaa",
+      "name": "no-pics-day",
+      "next": [
+        {
+          "condition": "true",
+          "node": "grab-date"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-WEZp-f"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f0ba22547a",
+      "name": "display-image",
+      "next": [
+        {
+          "condition": "true",
+          "node": "nodeback-to-main"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_image-CffYKl"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c385f40b65",
+      "name": "check-day",
+      "next": [
+        {
+          "condition": "temp.roverImageURL === null",
+          "conditionType": "props",
+          "node": "no-pics-day"
+        },
+        {
+          "condition": "true",
+          "node": "display-image"
+        }
+      ],
+      "onEnter": [
+        "get-mars-pictures {\"earthDate\":\"{{session.slots.earthDate.value}}\"}",
+        "basic-skills/slot_reset {\"slotName\":\"earthDate\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "4406968062",
+      "name": "nodeback-to-main",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-4SjcLc",
+        "builtin/wait {\"delay\":\"2000\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

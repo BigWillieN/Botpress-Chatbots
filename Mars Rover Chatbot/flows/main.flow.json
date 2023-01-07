@@ -1,0 +1,108 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "Greet_if_needed",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "Greet_if_needed",
+      "next": [
+        {
+          "condition": "session.greeted === 'true'",
+          "conditionType": "props",
+          "node": "Suggest-action"
+        },
+        {
+          "condition": "true",
+          "node": "Greet"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "c3f16ee503",
+      "name": "Greet",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Suggest-action"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"greeted\",\"value\":\"true\"}",
+        "say #!builtin_text--r7k-r",
+        "say #!builtin_text-Z1JJvR"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "7a3ad989b5",
+      "name": "intent-detection",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'rover-pictures'",
+          "conditionType": "intent",
+          "node": "rover-pics.flow.json"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "misunderstood"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Trxxt9"
+      ],
+      "onReceive": [],
+      "type": "standard"
+    },
+    {
+      "id": "cedcdc1093",
+      "name": "misunderstood",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Suggest-action"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-l7il43"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-069e4d",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "Suggest-action",
+      "flow": "skills/choice-069e4d.flow.json",
+      "next": [
+        {
+          "caption": "User picked [Yes, sh...]",
+          "condition": "temp['skill-choice-ret-pj35tetg8n'] == \"Yes, show me pictures.\"",
+          "conditionType": "raw",
+          "node": "rover-pics.flow.json"
+        },
+        {
+          "caption": "User picked [No, tes...]",
+          "condition": "temp['skill-choice-ret-pj35tetg8n'] == \"No, test out the NLU first\"",
+          "node": "intent-detection"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "conditionType": "always",
+          "node": "fallback-redirect.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "rover-pictures",
+  "utterances": {
+    "en": [
+      "[2018-09-09](earthDate) rover pictures",
+      "Photographs mars [2 October 2018](earthDate)",
+      "Mars February [11th 2017](earthDate) images",
+      "Images from rovers from [2019-01-05](earthDate)",
+      "Give me [2014-06-09](earthDate) pics from the space bot",
+      "I wish to see pictures from the rovers on the date of [June 2nd of last year](earthDate).",
+      "Can you provide me with images of the Mars rover bot from March [3rd 2014.](earthDate)",
+      "Pictures of space, like the mars rover bot taken on my birthday [5 Aug 2017](earthDate) please",
+      "What are the mars pictures like",
+      "Mars rover footage"
+    ]
+  },
+  "slots": [
+    {
+      "id": "I0JrAl7otx8vpp90FDo-l",
+      "name": "earthDate",
+      "entities": [
+        "time"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global"
+  ]
+}

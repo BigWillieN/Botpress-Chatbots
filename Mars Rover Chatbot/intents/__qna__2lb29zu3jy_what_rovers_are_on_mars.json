@@ -1,0 +1,15 @@
+{
+  "name": "__qna__2lb29zu3jy_what_rovers_are_on_mars",
+  "contexts": [
+    "global"
+  ],
+  "utterances": {
+    "en": [
+      "What rovers are on Mars?",
+      "How many Mars rovers are there?",
+      "Which Rovers have reached Mars",
+      "What is the number of the Mars rovers?"
+    ]
+  },
+  "slots": []
+}

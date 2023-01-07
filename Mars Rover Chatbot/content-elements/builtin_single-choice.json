@@ -1,0 +1,25 @@
+[
+  {
+    "id": "builtin_single-choice-iOiVkL",
+    "formData": {
+      "dropdownPlaceholder$en": "Select...",
+      "choices$en": [
+        {
+          "title": "Yes, show me pictures",
+          "value": "Yes, show me pictures."
+        },
+        {
+          "title": "No, test out the NLU first",
+          "value": "No, test out the NLU first"
+        }
+      ],
+      "markdown$en": true,
+      "disableFreeText$en": false,
+      "typing$en": true,
+      "text$en": "Would you like to look at pictures from rovers?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2023-01-07T08:21:56.642Z",
+    "modifiedOn": "2023-01-07T08:21:56.642Z"
+  }
+]
